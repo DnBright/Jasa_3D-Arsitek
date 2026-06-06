@@ -52,24 +52,24 @@
 
             <!-- Navigation -->
             <nav class="flex-1 px-4 py-6 overflow-y-auto space-y-2">
-                <a href="/admin/dashboard" class="flex items-center gap-4 px-4 py-3 rounded-xl bg-amber-400/10 text-amber-400 font-medium transition-colors border border-amber-400/20">
+                <a href="/admin/dashboard" class="flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-colors border {{ request()->is('admin/dashboard') ? 'bg-amber-400/10 text-amber-400 border-amber-400/20' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-transparent' }}">
                     <i class="fa-solid fa-chart-pie w-5 text-center"></i>
                     <span x-show="sidebarOpen" class="whitespace-nowrap">Dashboard</span>
                 </a>
-                <a href="#" class="flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 font-medium transition-colors">
+                <a href="/admin/projects" class="flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-colors border {{ request()->is('admin/projects') ? 'bg-amber-400/10 text-amber-400 border-amber-400/20' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-transparent' }}">
                     <i class="fa-solid fa-building w-5 text-center"></i>
                     <span x-show="sidebarOpen" class="whitespace-nowrap">Manajemen Proyek</span>
                 </a>
-                <a href="#" class="flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 font-medium transition-colors">
+                <a href="/admin/clients" class="flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-colors border {{ request()->is('admin/clients') ? 'bg-amber-400/10 text-amber-400 border-amber-400/20' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-transparent' }}">
                     <i class="fa-solid fa-users w-5 text-center"></i>
                     <span x-show="sidebarOpen" class="whitespace-nowrap">Klien</span>
                 </a>
-                <a href="#" class="flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 font-medium transition-colors">
+                <a href="/admin/messages" class="flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-colors border {{ request()->is('admin/messages') ? 'bg-amber-400/10 text-amber-400 border-amber-400/20' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-transparent' }}">
                     <i class="fa-solid fa-envelope w-5 text-center"></i>
                     <span x-show="sidebarOpen" class="whitespace-nowrap">Pesan</span>
                     <span x-show="sidebarOpen" class="ml-auto bg-amber-400 text-slate-900 text-xs font-bold px-2 py-0.5 rounded-full">3</span>
                 </a>
-                <a href="#" class="flex items-center gap-4 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 font-medium transition-colors">
+                <a href="/admin/settings" class="flex items-center gap-4 px-4 py-3 rounded-xl font-medium transition-colors border {{ request()->is('admin/settings') ? 'bg-amber-400/10 text-amber-400 border-amber-400/20' : 'text-slate-400 hover:bg-slate-800/50 hover:text-slate-200 border-transparent' }}">
                     <i class="fa-solid fa-gear w-5 text-center"></i>
                     <span x-show="sidebarOpen" class="whitespace-nowrap">Pengaturan</span>
                 </a>
